@@ -1,0 +1,22 @@
+# Use python 3 env
+
+# Init ~/.pypirc file
+
+
+# normal release
+python setup.py sdist upload
+
+# wheel release
+python setup.py sdist bdist_wheel upload
+
+# documentation
+cd docs
+make clean
+make html
+
+sphinx-autobuild . _build/html
+
+
+# Other libraries
+
+https://github.com/Satoshinaire/kucoin-api
