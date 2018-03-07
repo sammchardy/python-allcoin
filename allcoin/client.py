@@ -738,7 +738,7 @@ class Client(object):
         return self.get_order(symbol, order_id="-1")
 
     def get_orders(self, symbol, order_status, order_ids):
-        """Get info about a particular order
+        """Get info about multiple orders
 
         :param symbol: required
         :type symbol: str
@@ -795,7 +795,7 @@ class Client(object):
         return self._post('orders_info', data=params, signed=True)
 
     def get_order_history(self, symbol, order_status, page=1, limit=200):
-        """Get info about a particular order
+        """Get history of orders for a symbol
 
         :param symbol: required
         :type symbol: str
